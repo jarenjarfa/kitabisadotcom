@@ -33,7 +33,10 @@ public class annotation {
 	By PaymentElement = By.xpath("//*[@id=\"yw0\"]/div/div[3]/div/ul/li[2]");
 	By fullnameElement = By.id("Donations_donorName");
 	By emailOrPhoneElement = By.id("emailOrPhone");
+	
+
 	By messageAmountElement=By.xpath("//*[@id=\"yw0\"]/div/div[1]/div/p");
+	By messageEmailOrPhoneElement = By.xpath("//*[@id=\"yw0\"]/div/div[6]/p");
 	
 	String url="https://www.kitabisa.com/patunganbisasehat/contribute";
 	String message="";
@@ -115,6 +118,17 @@ public class annotation {
 		assertTrue(driver.getPageSource().contains(arg1));
 		
 		//assertEquals(arg1, msg);
+		driver.close();
+	}
+	
+	@Then("^I see error message on Email or WhatsApp field \"(.*?)\"$")
+	public void i_see_error_message_on_Email_or_WhatsApp_field(String arg1) throws InterruptedException{
+	    // Write code here that turns the phrase above into concrete actions
+		Thread.sleep(3000);
+		String msg=driver.findElement(messageEmailOrPhoneElement).getText();
+		//System.out.println("message : -------------------"+msg);
+		//assertTrue(driver.getPageSource().contains(arg1));
+		assertEquals(arg1, msg);
 		driver.close();
 	}
 	
