@@ -1,7 +1,7 @@
 Feature: donation 
 
 
-Scenario Outline: try to open donation page 
+Scenario Outline: try to donation
 
 	Given I on donation page 
 	And I input amount <amount> for donation 
@@ -40,7 +40,7 @@ Scenario Outline: try to validate Nama Lengkap
 		|fullname         			|message|
 		|@!*(!&(*!*&%^$(!*^*&!*)!!  |Nama Lengkap hanya bisa diisi oleh alphabet.|
 		
-Scenario Outline: try to validate Email or password 
+Scenario Outline: try to validate Email or WhatsApp 
 	Given I on donation page 
 	When I type Email or WhatsApp "<emailOrPhone>" 
 	Then I see error message on Email or WhatsApp field "<message>" 
