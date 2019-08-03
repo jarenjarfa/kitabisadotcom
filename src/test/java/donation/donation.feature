@@ -27,18 +27,6 @@ Examples:
 |3000000000000|Jumlah donasi maksimal Rp 500.000.000.|
 |222222222|Jumlah donasi harus dalam kelipatan ribuan.|
 
-Scenario Outline: try to validate Nama Lengkap
-
-Given I on donation page
-When I type Nama Lengkap "<fullname>"
-Then I see error message on Nama Lengkap Field "<message>"
-
-
-Examples:  
-|amount|message|                    		
-|1	|Jumlah donasi harus lebih besar dari Rp 1.000.|
-|3000000000000|Jumlah donasi maksimal Rp 500.000.000.|
-|222222222|Jumlah donasi harus dalam kelipatan ribuan.|
 
 Scenario Outline: try to validate Nama Lengkap
 

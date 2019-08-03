@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="0" name="donation.runTest" time="0.013" errors="0" skipped="0">
+<testsuite tests="24" failures="2" name="donation.runTest" time="0.063" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_201\jre\bin"/>
     <property name="java.vm.version" value="25.201-b09"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Toshiba\eclipse-workspace\kitabisa"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Toshiba\eclipse-workspace\kitabisadotcom"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\Toshiba\eclipse-workspace\kitabisa"/>
+    <property name="user.dir" value="C:\Users\Toshiba\eclipse-workspace\kitabisadotcom"/>
     <property name="java.runtime.version" value="1.8.0_201-b09"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_201\jre\lib\endorsed"/>
@@ -27,7 +27,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 8"/>
-    <property name="classworlds.conf" value="C:\Users\Toshiba\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf8002087067609999724.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\Toshiba\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf2864827978923428647.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_201/bin/server;C:/Program Files/Java/jre1.8.0_201/bin;C:/Program Files/Java/jre1.8.0_201/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;C:\flutter_windows_v1.7.8+hotfix.3-stable\flutter\bin;C:\xampp\php;C:\composer;C:\Program Files\Microsoft VS Code 2\bin;C:\Program Files\Java\jdk1.8.0_201\bin;C:\Users\Toshiba\AppData\Roaming\npm;C:\Users\Toshiba\AppData\Roaming\Composer\vendor\bin;C:\Users\Toshiba\AppData\Local\GitHubDesktop\bin;C:\Users\Toshiba\Desktop;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -53,7 +53,7 @@
     <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_201\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_201\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_201\jre\classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="C:\Users\Toshiba\eclipse-workspace\kitabisa\EMBEDDED"/>
+    <property name="maven.home" value="C:\Users\Toshiba\eclipse-workspace\kitabisadotcom\EMBEDDED"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -61,12 +61,44 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="| 1 | Jumlah donasi harus lebih besar dari Rp 1.000. |" name="Given I on donation page" time="0.009"/>
+  <testcase classname="| 200000 | Angga Saputra | abc@gmail.com |" name="Given I on donation page" time="0.013"/>
+  <testcase classname="| 200000 | Angga Saputra | abc@gmail.com |" name="And I input amount 200000 for donation" time="0"/>
+  <testcase classname="| 200000 | Angga Saputra | abc@gmail.com |" name="And I select payment methode" time="0"/>
+  <testcase classname="| 200000 | Angga Saputra | abc@gmail.com |" name="And I type Nama Lengkap &quot;Angga Saputra&quot;" time="0"/>
+  <testcase classname="| 200000 | Angga Saputra | abc@gmail.com |" name="And I type Email or WhatsApp &quot;abc@gmail.com&quot;" time="0"/>
+  <testcase classname="| 200000 | Angga Saputra | abc@gmail.com |" name="When I click Lanjut Pembayaran" time="0"/>
+  <testcase classname="| 200000 | Angga Saputra | abc@gmail.com |" name="Then I see Instruksi Pembayaran" time="0"/>
+  <testcase classname="| 200000 | Angga Saputra | abc@gmail.com |" name="| 200000 | Angga Saputra | abc@gmail.com |" time="0.001"/>
+  <testcase classname="| 1 | Jumlah donasi harus lebih besar dari Rp 1.000. |" name="Given I on donation page" time="0"/>
   <testcase classname="| 1 | Jumlah donasi harus lebih besar dari Rp 1.000. |" name="When I input amount 1 for donation" time="0"/>
   <testcase classname="| 1 | Jumlah donasi harus lebih besar dari Rp 1.000. |" name="Then I see error message &quot;Jumlah donasi harus lebih besar dari Rp 1.000.&quot;" time="0"/>
-  <testcase classname="| 1 | Jumlah donasi harus lebih besar dari Rp 1.000. |" name="| 1 | Jumlah donasi harus lebih besar dari Rp 1.000. |" time="0.002"/>
+  <testcase classname="| 1 | Jumlah donasi harus lebih besar dari Rp 1.000. |" name="| 1 | Jumlah donasi harus lebih besar dari Rp 1.000. |" time="0.001"/>
   <testcase classname="| 3000000000000 | Jumlah donasi maksimal Rp 500.000.000. |" name="Given I on donation page" time="0"/>
   <testcase classname="| 3000000000000 | Jumlah donasi maksimal Rp 500.000.000. |" name="When I input amount 3000000000000 for donation" time="0"/>
   <testcase classname="| 3000000000000 | Jumlah donasi maksimal Rp 500.000.000. |" name="Then I see error message &quot;Jumlah donasi maksimal Rp 500.000.000.&quot;" time="0"/>
-  <testcase classname="| 3000000000000 | Jumlah donasi maksimal Rp 500.000.000. |" name="| 3000000000000 | Jumlah donasi maksimal Rp 500.000.000. |" time="0.002"/>
+  <testcase classname="| 3000000000000 | Jumlah donasi maksimal Rp 500.000.000. |" name="| 3000000000000 | Jumlah donasi maksimal Rp 500.000.000. |" time="0.001"/>
+  <testcase classname="| 222222222 | Jumlah donasi harus dalam kelipatan ribuan. |" name="Given I on donation page" time="0"/>
+  <testcase classname="| 222222222 | Jumlah donasi harus dalam kelipatan ribuan. |" name="When I input amount 222222222 for donation" time="0"/>
+  <testcase classname="| 222222222 | Jumlah donasi harus dalam kelipatan ribuan. |" name="Then I see error message &quot;Jumlah donasi harus dalam kelipatan ribuan.&quot;" time="0"/>
+  <testcase classname="| 222222222 | Jumlah donasi harus dalam kelipatan ribuan. |" name="| 222222222 | Jumlah donasi harus dalam kelipatan ribuan. |" time="0.001"/>
+  <testcase classname="Given I on donation page(| @!*(!&amp;(*!*&amp;%^$(!*^*&amp;!*)!! | Nama Lengkap hanya bisa diisi oleh alphabet. |)" name="Given I on donation page(| @!*(!&amp;(*!*&amp;%^$" time="0"/>
+  <testcase classname="When I type Nama Lengkap &quot;@!*(!&amp;(*!*&amp;%^$(!*^*&amp;!*)!!&quot;(| @!*(!&amp;(*!*&amp;%^$(!*^*&amp;!*)!! | Nama Lengkap hanya bisa diisi oleh alphabet. |)" name="When I type Nama Lengkap &quot;@!*(!&amp;(*!*&amp;%^$(!*^*&amp;!*)!!&quot;(| @!*(!&amp;(*!*&amp;%^$" time="0"/>
+  <testcase classname="Then I see error message on Nama Lengkap Field &quot;Nama Lengkap hanya bisa diisi oleh alphabet.&quot;(| @!*(!&amp;(*!*&amp;%^$(!*^*&amp;!*)!! | Nama Lengkap hanya bisa diisi oleh alphabet. |)" name="Then I see error message on Nama Lengkap Field &quot;Nama Lengkap hanya bisa diisi oleh alphabet.&quot;(| @!*(!&amp;(*!*&amp;%^$" time="0.023">
+    <failure type="java.lang.AssertionError">java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at donation.annotation.i_see_error_message_on_Nama_Lengkap(annotation.java:115)
+	at ✽.Then I see error message on Nama Lengkap Field &quot;Nama Lengkap hanya bisa diisi oleh alphabet.&quot;(donation/donation.feature:35)
+</failure>
+  </testcase>
+  <testcase classname="| @!*(!&amp;(*!*&amp;%^$(!*^*&amp;!*)!! | Nama Lengkap hanya bisa diisi oleh alphabet. |" name="| @!*(!&amp;(*!*&amp;%^$" time="0.023">
+    <failure type="java.lang.AssertionError">java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at donation.annotation.i_see_error_message_on_Nama_Lengkap(annotation.java:115)
+	at ✽.Then I see error message on Nama Lengkap Field &quot;Nama Lengkap hanya bisa diisi oleh alphabet.&quot;(donation/donation.feature:35)
+</failure>
+  </testcase>
 </testsuite>
